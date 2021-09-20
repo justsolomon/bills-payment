@@ -11,14 +11,14 @@ const Products = () => {
   const dispatch = useDispatch();
 
   const { loading, error, data } = products;
+  const { biller, category } = sessionInfo;
   const getProducts = () => {
-    const { biller, category } = sessionInfo;
     dispatch(
       fetchProducts(biller?.billerId as string, category?.categoryId as string)
     );
   };
 
-  useEffect(getProducts, [dispatch, sessionInfo]);
+  useEffect(getProducts, [dispatch, biller?.billerId, category?.categoryId]);
 
   return error ? (
     <ErrorMessage error={error} retryRequest={getProducts} />
