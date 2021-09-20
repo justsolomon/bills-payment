@@ -12,10 +12,6 @@
     margin: 1rem 0;
     font-size: $font-size--md;
     line-height: $font-size--xl;
-
-    @media #{$media-mobile-sm} {
-      font-size: $font-size--base;
-    }
   }
 
   &__button {
@@ -24,6 +20,14 @@
     svg {
       height: 1.5em;
       width: 1.5em;
+    }
+  }
+
+  @media #{$media-mobile-sm} {
+    width: 95%;
+
+    &__description {
+      font-size: $font-size--base;
     }
   }
 }
