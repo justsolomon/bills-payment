@@ -1,0 +1,48 @@
+/* Typography variables */
+
+$font-family: "Open Sans", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+  "Droid Sans", "Helvetica Neue", sans-serif;
+$font-weight--normal: 400;
+$font-weight--medium: 600;
+$font-weight--bold: 700;
+
+$font-size--xxs: 12px;
+$font-size--xs: 13px;
+$font-size--sm: 14px;
+$font-size--base: 15px;
+$font-size--md: 16px;
+$font-size--lg: 18px;
+$font-size--xl: 20px;
+$font-size--xxl: 24px;
+
+/* Color Variables */
+$white: #ffffff;
+$primary-color: #1a202c;
+$secondary-color: #4a5568;
+$tertiary-color: #718096;
+$brand-color--primary: #3182ce;
+$brand-color--secondary: #2b6cb0;
+$brand-color--tertiary: #2c5282;
+$bg-light--primary: #edf2f7;
+$bg-light--secondary: #e2e8f0;
+$bg-light--tertiary: #cbd5e0;
+$bg-dark--primary: rgba(0, 0, 0, 0.1);
+$bg-dark--secondary: rgba(0, 0, 0, 0.15);
+$bg-dark--tertiary: rgba(0, 0, 0, 0.2);
+$shadow-outline: 0 0 0 3px rgba(66, 153, 225, 0.6);
+$bg-like-button: #fed7d770;
+$bg-share-button: #c6f6d570;
+$like-button-outline: #e53e3e;
+$share-button-outline: #38a169;
+$like-animation-bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+$border-radius--sm: 4px;
+$border-radius--md: 6px;
+$border-radius--lg: 8px;
+
+/* Media query variables */
+$media-desktop: "only screen and (max-width : 1200px)";
+$media-desktop-sm: "only screen and (max-width : 1024px)";
+$media-tablet: "only screen and (max-width : 768px)";
+$media-mobile: "only screen and (max-width : 600px)";
+$media-mobile-sm: "only screen and (max-width : 480px)";

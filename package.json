@@ -1,8 +1,25 @@
 {
-  "name": "bill-payment",
+  "name": "bills-payment",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --passWithNoTests",
+    "format": "prettier --config .prettierrc src --write",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
+    "axios": "^0.21.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.5",
+    "react-scripts": "4.0.3",
+    "redux": "^4.1.1",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.41.1"
+  },
+  "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -10,23 +27,33 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "@types/redux-logger": "^3.0.9",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
+    "redux-logger": "^3.0.6",
+    "typescript": "^4.1.2"
   },
   "eslintConfig": {
+    "plugins": [
+      "prettier"
+    ],
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ],
+      "no-console": [
+        "warn"
+      ]
+    }
   },
   "browserslist": {
     "production": [
