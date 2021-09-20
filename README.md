@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# Bills Payment App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Buy airtime, data bundles and pay all your bills quickly and effectively.
 
-## Available Scripts
+Demo: [https://bills-payment.herokuapp.com/](https://bills-payment.herokuapp.com/)
 
-In the project directory, you can run:
+## Getting Started
 
-### `yarn start`
+The following contains the steps required to get the application up and running on your local workspace.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node v16.6.2
+- yarn v1.22.10
+- Git v2.31.1
 
-### `yarn test`
+### Running locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the app locally, follow the steps below:
 
-### `yarn build`
+1. Clone the repository to your PC using your terminal. For more info, refer to this [article](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. After cloning, navigate into the repo using the command:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```
+   cd bills-payment
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install the dependencies in the package.json using the command:
 
-### `yarn eject`
+   ```
+   yarn install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. After the dependencies have been installed successfully, create a .env file at the root. Take a look at the env.sample file and configure your environment variables with your values in the .env file.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. After adding the environment variables, run the app in your terminal using the command
+   ```
+    yarn start
+   ```
