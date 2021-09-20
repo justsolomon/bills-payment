@@ -1,0 +1,10 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.biller-card {
+  @include card-image();
+
+  &__name {
+    margin-left: 1rem;
+  }
+}

@@ -6,6 +6,7 @@ body {
   font-family: $font-family;
   color: $primary-color;
   font-size: $font-size--base;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

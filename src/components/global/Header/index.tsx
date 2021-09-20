@@ -2,45 +2,25 @@ import { useDispatch, useSelector } from "react-redux";
 import { PageName, RootState } from "redux/types";
 import Button from "../Button";
 import { ReactComponent as BackArrow } from "assets/vectors/back-arrow.svg";
-import {
-  goToBillCategories,
-  goToCategoryBillers,
-  goToProductsPage
-} from "redux/page/pageActions";
+import goToPage from "redux/page/pageService";
+import styles from "./header.module.scss";
 
 const Header = () => {
   const { header, prevPage } = useSelector((state: RootState) => state.page);
   const dispatch = useDispatch();
 
-  const goToPage = (page: PageName): void => {
-    switch (page) {
-      case "bill-categories":
-        dispatch(goToBillCategories());
-        break;
-      case "category-billers":
-        dispatch(goToCategoryBillers());
-        break;
-      case "products":
-        dispatch(goToProductsPage());
-        break;
-      default:
-        dispatch(goToBillCategories());
-    }
-  };
-
   return (
-    <header>
-      {prevPage ? (
-        <Button
-          variant="transparent"
-          style={{ color: "black" }}
-          leftIcon={<BackArrow />}
-          onClick={() => goToPage(prevPage)}
-        >
-          Back
-        </Button>
-      ) : null}
-      <h1>{header}</h1>
+    <header className={styles["header"]}>
+      <Button
+        variant="transparent"
+        className={styles["header__back-button"]}
+        style={{ visibility: prevPage ? "visible" : "hidden" }}
+        leftIcon={<BackArrow />}
+        onClick={() => dispatch(goToPage(prevPage as PageName))}
+      >
+        Back
+      </Button>
+      <h1 className={styles["header__title"]}>{header}</h1>
     </header>
   );
 };

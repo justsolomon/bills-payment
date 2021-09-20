@@ -19,7 +19,7 @@ const fetchBillers = (categoryId: string): ((dispatch: Dispatch) => void) => {
         if (responseCode === "00") {
           dispatch(fetchBillersSuccess(result));
         } else {
-          dispatch(fetchBillersFailure(getErrorMessage(result)));
+          dispatch(fetchBillersFailure(getErrorMessage(res.data)));
         }
       })
       .catch((err) => {

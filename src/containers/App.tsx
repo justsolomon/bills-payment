@@ -7,6 +7,7 @@ function App() {
   return (
     <Provider store={store}>
       <AllPages />
+      <section id="modals-container"></section>
     </Provider>
   );
 }

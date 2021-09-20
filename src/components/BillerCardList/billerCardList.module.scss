@@ -1,0 +1,5 @@
+@import "styles/mixins";
+
+.biller-card-list {
+  @include default-card-list();
+}

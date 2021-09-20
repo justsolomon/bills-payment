@@ -1,5 +1,10 @@
 export interface RootState {
   page: Page;
+  sessionInfo: SessionInfo;
+  billCategories: DefaultReducer<BillCategory[]>;
+  billers: DefaultReducer<Biller[]>;
+  products: DefaultReducer<Product[]>;
+  payment: DefaultReducer<null>;
 }
 
 export interface Action<Payload = null> {
@@ -14,7 +19,11 @@ export interface DefaultReducer<DataType> {
   data: DataType;
 }
 
-export type PageName = "bill-categories" | "category-billers" | "products";
+export type PageName =
+  | "bill-categories"
+  | "category-billers"
+  | "customer-input"
+  | "products";
 export interface Page {
   currentPage: PageName;
   prevPage: PageName | null;
@@ -43,7 +52,15 @@ export interface Biller {
 export interface Product {
   amount: string;
   isAmountFixed: string;
+  itemFee: string;
   paymentCode: string;
   paymentItemId: string;
   paymentItemName: string;
+}
+
+export interface SessionInfo {
+  category: BillCategory | null;
+  biller: Biller | null;
+  billerCustomerId: string;
+  product: Product | null;
 }

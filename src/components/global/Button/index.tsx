@@ -48,10 +48,11 @@ function Button({
   return (
     <button
       type={type}
-      className={`${styles["button"]} ${className} 
-        ${styles["button--" + variant]} ${styles["button--" + colorScheme]} 
-        ${iconButton ? styles["button--icon"] : ""}
-        `}
+      className={`${styles["button"]} ${className} ${
+        styles["button--" + variant]
+      } ${styles["button--" + colorScheme]} ${
+        iconButton ? styles["button--icon"] : ""
+      } ${isLoading ? styles["button--loading"] : ""}`}
       disabled={isDisabled || isLoading}
       onClick={onClick}
       {...rest}
@@ -59,7 +60,7 @@ function Button({
       {leftIcon ? (
         <span className={styles["button__left-icon"]}>{leftIcon}</span>
       ) : null}
-      <>{isLoading ? <Spinner size="24px" /> : children}</>
+      <>{isLoading ? <Spinner size="24px" color="#ffffff" /> : children}</>
     </button>
   );
 }

@@ -1,0 +1,35 @@
+@import "styles/variables";
+
+.customer-input {
+  width: 100%;
+
+  &__label,
+  &__input {
+    display: block;
+    width: 100%;
+  }
+
+  &__label {
+    font-size: $font-size--md;
+    font-weight: $font-weight--medium;
+    margin-bottom: 0.5rem;
+  }
+
+  &__input {
+    height: 50px;
+    padding: 0px 1rem;
+    font-size: $font-size--md;
+    border: 1px solid $bg-light--tertiary;
+    border-radius: $border-radius--sm;
+    outline: none;
+
+    &:hover {
+      border-color: $bg-light--tertiary;
+    }
+
+    &:focus {
+      border-color: $brand-color--primary;
+      box-shadow: $brand-color--primary 0px 0px 0px 1px;
+    }
+  }
+}

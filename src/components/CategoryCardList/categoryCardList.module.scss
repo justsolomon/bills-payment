@@ -1,0 +1,5 @@
+@import "styles/mixins";
+
+.category-card-list {
+  @include default-card-list();
+}

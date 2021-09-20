@@ -1,0 +1,29 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.error-message {
+  @include flex-center();
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+
+  &__description {
+    margin: 1rem 0;
+    font-size: $font-size--md;
+    line-height: $font-size--xl;
+
+    @media #{$media-mobile-sm} {
+      font-size: $font-size--base;
+    }
+  }
+
+  &__button {
+    border-radius: 20px;
+
+    svg {
+      height: 1.5em;
+      width: 1.5em;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "styles/variables";
+
+.header {
+  min-height: 10vh;
+  width: 55%;
+  margin: 0 auto 5vh auto;
+  padding-top: 2vh;
+
+  &__title {
+    font-size: $font-size--xxl;
+    font-weight: $font-weight--bold;
+    margin-bottom: 0.3rem;
+  }
+
+  &__back-button {
+    color: $primary-color;
+    font-weight: $font-weight--medium;
+    justify-content: center;
+    padding: 0;
+  }
+
+  @media #{$media-desktop-sm} {
+    width: 85%;
+  }
+
+  @media #{$media-tablet} {
+    width: 75%;
+  }
+
+  @media #{$media-mobile} {
+    width: 80%;
+  }
+
+  @media #{$media-mobile-sm} {
+    &__title {
+      font-size: $font-size--xl;
+    }
+    width: 90%;
+  }
+}

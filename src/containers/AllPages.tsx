@@ -1,3 +1,4 @@
+import CustomerInput from "components/CustomerInput";
 import Layout from "components/global/Layout";
 import { useSelector } from "react-redux";
 import { RootState } from "redux/types";
@@ -14,6 +15,8 @@ const AllPages = () => {
         return <BillCategories />;
       case "category-billers":
         return <CategoryBillers />;
+      case "customer-input":
+        return <CustomerInput />;
       case "products":
         return <Products />;
       default:

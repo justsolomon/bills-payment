@@ -21,7 +21,7 @@ const fetchCategories = (): ((dispatch: Dispatch) => void) => {
         if (responseCode === "00") {
           dispatch(fetchCategoriesSuccess(result));
         } else {
-          dispatch(fetchCategoriesFailure(getErrorMessage(result)));
+          dispatch(fetchCategoriesFailure(getErrorMessage(res.data)));
         }
       })
       .catch((err) => {

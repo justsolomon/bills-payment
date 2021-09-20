@@ -1,0 +1,51 @@
+@import "styles/variables";
+
+.main-content {
+  margin: 0 auto;
+  width: 55%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &__children {
+    height: 88%;
+    width: 100%;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    padding-right: 1rem;
+  }
+
+  &__continue-button {
+    height: 10%;
+    font-size: $font-size--lg;
+    padding: 0 2rem;
+  }
+
+  @media #{$media-desktop-sm} {
+    width: 85%;
+  }
+
+  @media #{$media-tablet} {
+    width: 75%;
+  }
+
+  @media #{$media-mobile} {
+    width: 80%;
+  }
+
+  @media #{$media-mobile-sm} {
+    width: 90%;
+
+    &__children {
+      padding: 0;
+    }
+
+    &__continue-button {
+      height: 50px;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

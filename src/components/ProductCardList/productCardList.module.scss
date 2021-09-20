@@ -1,0 +1,5 @@
+@import "styles/mixins";
+
+.product-card-list {
+  @include default-card-list();
+}

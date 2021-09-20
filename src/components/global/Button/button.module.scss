@@ -1,6 +1,9 @@
 @import "styles/variables";
+@import "styles/mixins";
 
 .button {
+  @include flex-center();
+
   height: 40px;
   padding: 0 16px;
   border: none;
@@ -9,6 +12,11 @@
   font-size: $font-size--md;
   font-weight: $font-weight--bold;
   border-radius: $border-radius--sm;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: $shadow-outline;
+  }
 
   &:disabled {
     cursor: not-allowed;
@@ -68,12 +76,21 @@
     }
   }
 
+  &--loading {
+    min-width: 180px;
+  }
+
   &--icon {
     padding: 0 10px;
     height: 32px;
   }
 
   &__left-icon {
-    margin-right: 8px;
+    margin: 3px 8px 0 0;
+
+    svg {
+      height: 16px;
+      width: 16px;
+    }
   }
 }

@@ -2,8 +2,7 @@ import axios from "axios";
 
 // Creates a base instance for all axios based request
 const axiosInstance = axios.create({
-  baseURL: `https://x2rq8qbt0d.execute-api.us-east-1.amazonaws.com/dev`,
-  withCredentials: true
+  baseURL: `https://x2rq8qbt0d.execute-api.us-east-1.amazonaws.com/dev`
 });
 
 axiosInstance.interceptors.request.use((config) => {

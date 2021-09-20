@@ -1,0 +1,11 @@
+@import "styles/mixins";
+@import "styles/variables";
+
+.product-card {
+  @include card-image();
+
+  &__name {
+    margin-left: 1rem;
+    text-align: left;
+  }
+}
